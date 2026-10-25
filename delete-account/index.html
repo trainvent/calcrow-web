@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Delete Your Calcrow Account</title>
+  <meta
+    name="description"
+    content="How to delete your Calcrow account and what data is removed."
+  >
+  <link rel="alternate" hreflang="en" href="index.html">
+  <link rel="alternate" hreflang="de" href="../de/delete-account/index.html">
+  <link rel="stylesheet" href="../static-pages.css">
+  <script src="../static-pages.js" defer></script>
+  <style>
+    :root {
+      color-scheme: light;
+      --bg: #f5f1e8;
+      --panel: #fffdf8;
+      --ink: #1f1a17;
+      --muted: #665d57;
+      --line: #e7ddd1;
+      --accent: #bb5a3c;
+      --accent-soft: #f4ddd2;
+      --shadow: 0 20px 50px rgba(31, 26, 23, 0.08);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      color: var(--ink);
+      background:
+        radial-gradient(circle at top left, #f8e3d8, transparent 30%),
+        radial-gradient(circle at top right, #e0efe8, transparent 35%),
+        var(--bg);
+    }
+
+    main {
+      width: min(860px, calc(100vw - 32px));
+      margin: 40px auto;
+      padding: 32px;
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 24px;
+      box-shadow: var(--shadow);
+    }
+
+    .eyebrow {
+      display: inline-block;
+      margin-bottom: 12px;
+      padding: 6px 10px;
+      border-radius: 999px;
+      background: var(--accent-soft);
+      color: var(--accent);
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-decoration: none;
+      text-transform: uppercase;
+    }
+
+    .eyebrow:hover,
+    .eyebrow:focus-visible {
+      background: #efd0c2;
+      outline: none;
+    }
+
+    h1, h2 {
+      line-height: 1.2;
+      margin: 0 0 12px;
+    }
+
+    h1 {
+      font-size: clamp(2rem, 6vw, 3.4rem);
+      margin-bottom: 16px;
+    }
+
+    h2 {
+      font-size: 1.2rem;
+      margin-top: 28px;
+    }
+
+    p, li {
+      color: var(--muted);
+      font-size: 1rem;
+    }
+
+    ol, ul {
+      padding-left: 20px;
+    }
+
+    .meta {
+      margin: 0 0 24px;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    .notice {
+      padding: 16px 18px;
+      border-radius: 16px;
+      background: #faf4ec;
+      border: 1px solid var(--line);
+    }
+
+    .delete-panel {
+      margin: 28px 0;
+      padding: 22px;
+      border-radius: 22px;
+      background:
+        linear-gradient(135deg, rgba(187, 90, 60, 0.08), rgba(224, 239, 232, 0.4)),
+        var(--panel);
+      border: 1px solid var(--line);
+    }
+
+    .delete-panel h2 {
+      margin-top: 0;
+    }
+
+    .form-grid {
+      display: grid;
+      gap: 14px;
+      margin-top: 18px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 6px;
+      color: var(--ink);
+      font-size: 0.95rem;
+      font-weight: 700;
+    }
+
+    input {
+      width: 100%;
+      padding: 14px 16px;
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      font: inherit;
+      color: var(--ink);
+      background: #fff;
+    }
+
+    input:focus {
+      outline: 2px solid rgba(187, 90, 60, 0.2);
+      border-color: var(--accent);
+    }
+
+    .danger-button {
+      margin-top: 6px;
+      padding: 14px 18px;
+      border: 0;
+      border-radius: 999px;
+      background: linear-gradient(135deg, #c14b35, #9f3523);
+      color: #fff;
+      font: inherit;
+      font-weight: 700;
+      cursor: pointer;
+      box-shadow: 0 14px 30px rgba(159, 53, 35, 0.18);
+    }
+
+    .danger-button:disabled {
+      cursor: wait;
+      opacity: 0.7;
+      box-shadow: none;
+    }
+
+    .helper {
+      margin-top: 12px;
+      font-size: 0.95rem;
+    }
+
+    .status {
+      display: none;
+      margin-top: 16px;
+      padding: 14px 16px;
+      border-radius: 14px;
+      font-size: 0.96rem;
+    }
+
+    .status[data-tone="success"] {
+      display: block;
+      background: #e6f4ec;
+      border: 1px solid #bdddc9;
+      color: #255c3d;
+    }
+
+    .status[data-tone="error"] {
+      display: block;
+      background: #fae6e1;
+      border: 1px solid #ebc2b7;
+      color: #8d3425;
+    }
+
+    a {
+      color: var(--accent);
+    }
+
+    @media (max-width: 640px) {
+      main {
+        width: min(860px, calc(100vw - 20px));
+        margin: 16px auto;
+        padding: 20px;
+        border-radius: 18px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <header class="page-header">
+      <a class="brand-pill" href="../" aria-label="Calcrow home">
+        <img class="brand-icon" src="../icons/Icon-192.png" alt="">
+        <span class="brand-name">Calcrow</span>
+      </a>
+      <a class="language-switch" href="../de/delete-account/index.html" lang="de" hreflang="de" aria-label="Diese Seite auf Deutsch anzeigen">
+        <span class="language-flag" aria-hidden="true">🇩🇪</span>
+        <span class="language-copy"><span class="language-label">Switch language</span><span class="language-name">Deutsch</span></span>
+        <span class="language-arrow" aria-hidden="true">⇄</span>
+      </a>
+    </header>
+    <h1>Delete Your Account</h1>
+    <p class="meta">Last updated: March 12, 2026</p>
+
+    <p class="notice">
+      Use the form below to permanently delete an email/password Calcrow account.
+      This action is immediate and cannot be undone.
+    </p>
+
+    <section class="delete-panel">
+      <h2>Delete account now</h2>
+      <p>
+        Enter the email address and password for the account you want to delete.
+        Calcrow will sign in, remove your account data, and permanently delete the account.
+      </p>
+
+      <form id="delete-form" class="form-grid">
+        <div>
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" autocomplete="email" required>
+        </div>
+
+        <div>
+          <label for="password">Password</label>
+          <input
+            id="password"
+            name="password"
+            type="password"
+            autocomplete="current-password"
+            required
+          >
+        </div>
+
+        <button id="delete-button" class="danger-button" type="submit">
+          Delete account permanently
+        </button>
+      </form>
+
+      <p class="helper">
+        This self-service deletion works for accounts that use email and password sign-in.
+      </p>
+      <div id="status" class="status" aria-live="polite"></div>
+    </section>
+
+    <h2>What will be deleted</h2>
+    <ul>
+      <li>Your Calcrow account profile and authentication record.</li>
+      <li>Stored app settings associated with that account.</li>
+      <li>Linked cloud metadata saved specifically for your Calcrow account.</li>
+    </ul>
+
+    <h2>What is not automatically deleted</h2>
+    <ul>
+      <li>Spreadsheet files already stored on your device, in your browser downloads, or in your personal cloud storage.</li>
+      <li>Purchase, billing, or subscription records maintained by the app store, payment processor, or tax and accounting systems.</li>
+      <li>Backup copies retained temporarily for security, fraud prevention, or legal compliance where required.</li>
+    </ul>
+
+    <h2>Timing</h2>
+    <p>
+      Account deletion is intended to start immediately after confirmation. Some connected systems or retained
+      records may take additional time to disappear from backups or provider dashboards.
+    </p>
+
+    <h2>Need more context?</h2>
+    <p>
+      Review the <a href="../privacy-policy/index.html">Calcrow Privacy Policy</a> for more details about how account and file data is handled.
+    </p>
+  </main>
+
+  <footer data-calcrow-footer></footer>
+
+  <script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-app.js";
+    import {
+      deleteUser,
+      getAuth,
+      signInWithEmailAndPassword,
+      signOut,
+    } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-auth.js";
+    import {
+      deleteDoc,
+      doc,
+      getFirestore,
+    } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-firestore.js";
+
+    const firebaseConfig = {
+      apiKey: "AIzaSyBgEt95MLLxnL1lE18gfc9k8Y9MLxm2Ouw",
+      appId: "1:743453990456:web:aff40891efc181165f90cd",
+      messagingSenderId: "743453990456",
+      projectId: "calcrow-prod",
+      authDomain: "calcrow-prod.firebaseapp.com",
+      storageBucket: "calcrow-prod.firebasestorage.app",
+      measurementId: "G-XL02B747JS",
+    };
+
+    const app = initializeApp(firebaseConfig);
+    const auth = getAuth(app);
+    const db = getFirestore(app);
+
+    const form = document.getElementById("delete-form");
+    const button = document.getElementById("delete-button");
+    const status = document.getElementById("status");
+
+    function setStatus(message, tone) {
+      status.textContent = message;
+      status.dataset.tone = tone;
+    }
+
+    function clearStatus() {
+      status.textContent = "";
+      delete status.dataset.tone;
+    }
+
+    function mapError(error) {
+      switch (error?.code) {
+        case "auth/invalid-credential":
+        case "auth/wrong-password":
+        case "auth/user-not-found":
+        case "auth/invalid-email":
+          return "The email or password was not accepted.";
+        case "auth/too-many-requests":
+          return "Too many attempts. Try again a little later.";
+        case "auth/network-request-failed":
+          return "Network error while contacting Firebase.";
+        default:
+          return error?.message || "Account deletion failed.";
+      }
+    }
+
+    async function tryDeleteDoc(path, uid) {
+      try {
+        await deleteDoc(doc(db, path, uid));
+      } catch (error) {
+        console.warn(`Could not delete ${path}/${uid}`, error);
+      }
+    }
+
+    form.addEventListener("submit", async (event) => {
+      event.preventDefault();
+      clearStatus();
+      button.disabled = true;
+
+      const email = form.email.value.trim();
+      const password = form.password.value;
+
+      try {
+        const credential = await signInWithEmailAndPassword(auth, email, password);
+        const user = credential.user;
+
+        await Promise.all([
+          tryDeleteDoc("users", user.uid),
+          tryDeleteDoc("email_verification_codes", user.uid),
+          tryDeleteDoc("verificationCodes", user.uid),
+        ]);
+
+        await deleteUser(user);
+        setStatus("Your Calcrow account has been permanently deleted.", "success");
+        form.reset();
+      } catch (error) {
+        console.error(error);
+        setStatus(mapError(error), "error");
+        try {
+          await signOut(auth);
+        } catch (_) {
+          // Ignore sign-out errors after a failed delete flow.
+        }
+      } finally {
+        button.disabled = false;
+      }
+    });
+  </script>
+</body>
+</html>

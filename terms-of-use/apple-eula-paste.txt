@@ -1,0 +1,132 @@
+CALCROW END USER LICENSE AGREEMENT
+
+Effective date: June 16, 2026
+
+These Terms of Use apply to your use of Calcrow, including the mobile app, web app, subscriptions, local file editing, and optional cloud integrations. By creating an account or using Calcrow, you agree to these terms.
+
+WHO PROVIDES CALCROW
+
+Calcrow is provided by Trainvent. If you have questions about these terms, contact us through https://calcrow.com/support/
+
+Developer contact for questions, complaints, or claims about Calcrow:
+
+Trainvent
+Ravensbergerstraße 75
+33602 Bielefeld
+Germany
+support@trainvent.com
+https://trainvent.com/
+
+APPLE APP STORE TERMS
+
+If you obtain Calcrow through the Apple App Store, you and Trainvent acknowledge that these terms are between you and Trainvent only, not with Apple. Trainvent, not Apple, is solely responsible for Calcrow and its content. These terms do not change or conflict with the Apple Media Services Terms and Conditions, including the Usage Rules that apply to App Store apps.
+
+Apple has no obligation to provide maintenance or support services for Calcrow.
+
+Apple and Apple's subsidiaries are third-party beneficiaries of these terms and may enforce these terms against you as third-party beneficiaries after you accept them.
+
+USING CALCROW
+
+Calcrow helps you open, edit, preview, and save spreadsheet-style work log files. You are responsible for the files you import, the data you enter, and the accuracy of your records.
+
+You may use Calcrow only in compliance with applicable law.
+
+You may not misuse, disrupt, reverse engineer, or attempt unauthorized access to Calcrow or its services.
+
+You are responsible for keeping copies or backups of important files.
+
+APP LICENSE
+
+Calcrow is licensed, not sold, to you. Trainvent grants you a limited, non-transferable license to use Calcrow on devices that you own or control, subject to these terms and any applicable app store usage rules. For Apple App Store versions, this license is limited to use on Apple-branded products that you own or control and as permitted by the Usage Rules in the Apple Media Services Terms and Conditions, except that Calcrow may also be accessed and used by other accounts associated with the purchaser through Family Sharing or volume purchasing where Apple permits that use.
+
+You may not transfer, redistribute, sublicense, rent, lease, lend, sell, or make Calcrow available over a network where it could be used by multiple devices at the same time, except as allowed by applicable app store rules.
+
+You may not copy, modify, create derivative works of, reverse engineer, disassemble, or attempt to derive the source code of Calcrow, except where applicable law allows this despite these restrictions or where open-source license terms for included components allow it.
+
+If you sell or transfer a device that contains Calcrow, you should remove Calcrow from that device first.
+
+Updates, upgrades, content, materials, features, and services provided through Calcrow are covered by these terms unless separate terms apply.
+
+ACCOUNTS
+
+Some features require an account. You are responsible for keeping your sign-in credentials secure and for activity under your account. You can request account deletion using the instructions at https://calcrow.com/delete-account/
+
+FILES AND CLOUD INTEGRATIONS
+
+Calcrow may process spreadsheet files you choose to open. If you connect Google Drive, WebDAV, Nextcloud, or another cloud provider, your files and related metadata may be sent to that provider to perform the actions you request. Those providers operate under their own terms and policies.
+
+You must comply with applicable third-party terms when using Calcrow, including app store terms, cloud provider terms, authentication provider terms, payment provider terms, advertising or analytics service terms, and any wireless data service agreement that applies to your device or network.
+
+TECHNICAL DATA
+
+Calcrow may collect and use technical data and related information, such as device, system, app, diagnostic, and usage information, to provide software updates, support, security, analytics, and other services related to Calcrow. We may use information that does not personally identify you to improve Calcrow or provide services and technologies to you. Our data practices are described in the Privacy Policy at https://calcrow.com/privacy-policy/
+
+EXTERNAL SERVICES
+
+Calcrow may enable access to Trainvent services or third-party services and websites, including app stores, cloud providers, authentication providers, payment providers, and advertising or analytics services. You use external services at your own risk. Trainvent is not responsible for examining or evaluating the content, accuracy, availability, policies, or practices of third-party external services.
+
+Information shown by Calcrow or an external service is for general informational purposes and is not guaranteed.
+
+You may not use external services in a way that violates these terms, infringes intellectual property rights, or harasses, abuses, stalks, threatens, or defames any person or entity.
+
+External services may not be available in all languages, countries, regions, or locations, and may not be appropriate or available for every use.
+
+Trainvent may change, suspend, remove, disable, or limit access to external services at any time where permitted by law.
+
+SUBSCRIPTIONS AND PURCHASES
+
+Calcrow may offer paid features through auto-renewable subscriptions or other in-app purchases. The app store purchase screen shows the available product name, duration, price, renewal terms, and cancellation options before purchase.
+
+Subscriptions renew automatically unless canceled according to the app store's rules.
+
+Purchases, renewals, refunds, and cancellations are handled by the applicable app store.
+
+You can manage or cancel subscriptions in your Apple App Store or Google Play account settings.
+
+Deleting your Calcrow account does not automatically cancel an app store subscription.
+
+ADS AND PRIVACY CHOICES
+
+Some versions or configurations of Calcrow may show ads. Ad-related privacy choices are described in the Ads Privacy Policy at https://calcrow.com/privacy-policy-ads/ General data handling is described in the Privacy Policy at https://calcrow.com/privacy-policy/
+
+AVAILABILITY AND CHANGES
+
+Calcrow may change, add, or remove features over time. We aim to keep the app reliable, but we do not guarantee uninterrupted availability, compatibility with every file, or error-free operation.
+
+NO PROFESSIONAL ADVICE
+
+Calcrow is a productivity tool. It does not provide legal, payroll, accounting, tax, employment, or compliance advice. You are responsible for verifying whether your records meet your personal, employer, or regulatory requirements.
+
+DISCLAIMER
+
+Calcrow is provided "as is" and "as available," with all faults, to the fullest extent permitted by law. We disclaim express, implied, and statutory warranties and conditions, including warranties or conditions of merchantability, satisfactory quality, fitness for a particular purpose, accuracy, quiet enjoyment, and non-infringement where such disclaimers are allowed. No oral or written information or advice from Trainvent or its representatives creates a warranty. If Calcrow or related services prove defective, you assume the cost of any necessary servicing, repair, or correction, except where applicable law provides otherwise.
+
+To the extent any warranty cannot be effectively disclaimed under applicable law, Trainvent is solely responsible for that warranty. If Calcrow fails to conform to an applicable warranty and you obtained Calcrow through the Apple App Store, you may notify Apple, and Apple will refund the purchase price for Calcrow, if any. To the maximum extent permitted by law, Apple has no other warranty obligation for Calcrow, and any other claims, losses, liabilities, damages, costs, or expenses attributable to a failure to conform to a warranty are Trainvent's responsibility.
+
+PRODUCT AND INTELLECTUAL PROPERTY CLAIMS
+
+Trainvent, not Apple, is responsible for addressing claims from you or any third party relating to Calcrow or your possession and use of Calcrow, including product liability claims, claims that Calcrow fails to conform to legal or regulatory requirements, and claims under consumer protection, privacy, or similar laws. If a third party claims that Calcrow or your possession and use of Calcrow infringes that party's intellectual property rights, Trainvent, not Apple, is responsible for investigating, defending, settling, and discharging that claim.
+
+LIMITATION OF LIABILITY
+
+To the fullest extent permitted by law, Trainvent will not be liable for indirect, incidental, special, consequential, or punitive damages, personal injury, loss of data, loss of profits, business interruption, or other commercial damages or losses arising from your use of or inability to use Calcrow, regardless of the legal theory and even if Trainvent has been advised of the possibility of those damages. To the fullest extent permitted by law, Trainvent's total liability for all claims relating to Calcrow will not exceed fifty U.S. dollars (US $50.00) or the minimum amount required by applicable law.
+
+TERMINATION
+
+We may suspend or terminate access if you materially violate these terms, misuse the app, or create security, legal, or operational risk. Your rights under these terms terminate automatically if you fail to comply with them. You may stop using Calcrow at any time.
+
+EXPORT COMPLIANCE
+
+You may not use, export, or re-export Calcrow except as authorized by United States law and the laws of the jurisdiction where Calcrow was obtained. You represent and warrant that you are not located in a country that is subject to a U.S. Government embargo or designated by the U.S. Government as a terrorist-supporting country, and that you are not on any U.S. government restricted-party list, including the U.S. Treasury Department's Specially Designated Nationals List or the U.S. Department of Commerce Denied Persons List or Entity List. You also agree not to use Calcrow for purposes prohibited by United States law, including the development, design, manufacture, or production of nuclear, missile, chemical, or biological weapons.
+
+U.S. GOVERNMENT USERS
+
+Calcrow and related documentation are "Commercial Items" as defined in 48 C.F.R. 2.101, consisting of "Commercial Computer Software" and "Commercial Computer Software Documentation." U.S. Government end users receive only the rights granted to all other end users under these terms.
+
+GOVERNING LAW
+
+Except where applicable consumer protection law requires otherwise, these terms and your relationship with Trainvent are governed by the laws of the State of California, excluding conflict-of-law rules. You and Trainvent agree to the personal and exclusive jurisdiction of the courts located in Santa Clara County, California, for disputes arising from these terms. If you are a consumer in the European Union, Switzerland, Norway, Iceland, or another jurisdiction that requires local consumer law to apply, you may have the benefit of mandatory protections of the law of your usual place of residence. The United Nations Convention on Contracts for the International Sale of Goods does not apply.
+
+CHANGES TO THESE TERMS
+
+We may update these terms when Calcrow changes or when legal or operational requirements change. The current version will be posted at https://calcrow.com/terms-of-use/

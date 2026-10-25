@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Calcrow Support</title>
+  <meta
+    name="description"
+    content="Support and contact information for Calcrow."
+  >
+  <link rel="alternate" hreflang="en" href="index.html">
+  <link rel="alternate" hreflang="de" href="../de/support/index.html">
+  <link rel="stylesheet" href="../static-pages.css">
+  <script src="../static-pages.js" defer></script>
+  <style>
+    :root {
+      color-scheme: light;
+      --bg: #f5f1e8;
+      --panel: #fffdf8;
+      --ink: #1f1a17;
+      --muted: #665d57;
+      --line: #e7ddd1;
+      --accent: #bb5a3c;
+      --accent-soft: #f4ddd2;
+      --shadow: 0 20px 50px rgba(31, 26, 23, 0.08);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      color: var(--ink);
+      background:
+        radial-gradient(circle at top left, #f8e3d8, transparent 30%),
+        radial-gradient(circle at top right, #e0efe8, transparent 35%),
+        var(--bg);
+    }
+
+    main {
+      width: min(860px, calc(100vw - 32px));
+      margin: 40px auto;
+      padding: 32px;
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 24px;
+      box-shadow: var(--shadow);
+    }
+
+    .eyebrow {
+      display: inline-block;
+      margin-bottom: 12px;
+      padding: 6px 10px;
+      border-radius: 999px;
+      background: var(--accent-soft);
+      color: var(--accent);
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-decoration: none;
+      text-transform: uppercase;
+    }
+
+    .eyebrow:hover,
+    .eyebrow:focus-visible {
+      background: #efd0c2;
+      outline: none;
+    }
+
+    h1, h2 {
+      line-height: 1.2;
+      margin: 0 0 12px;
+    }
+
+    h1 {
+      font-size: clamp(2rem, 6vw, 3.4rem);
+      margin-bottom: 16px;
+    }
+
+    h2 {
+      font-size: 1.2rem;
+      margin-top: 28px;
+    }
+
+    p, li {
+      color: var(--muted);
+      font-size: 1rem;
+    }
+
+    ul {
+      padding-left: 20px;
+    }
+
+    .meta {
+      margin: 0 0 24px;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    .notice {
+      padding: 16px 18px;
+      border-radius: 16px;
+      background: #faf4ec;
+      border: 1px solid var(--line);
+    }
+
+    .support-card {
+      margin-top: 24px;
+      padding: 22px;
+      border-radius: 22px;
+      background:
+        linear-gradient(135deg, rgba(187, 90, 60, 0.08), rgba(224, 239, 232, 0.4)),
+        var(--panel);
+      border: 1px solid var(--line);
+    }
+
+    .contact-link {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 12px 18px;
+      border-radius: 999px;
+      background: linear-gradient(135deg, #c96b4d, #b14d30);
+      color: #fff;
+      text-decoration: none;
+      font-weight: 700;
+      box-shadow: 0 14px 30px rgba(177, 77, 48, 0.16);
+    }
+
+    .quick-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 16px;
+    }
+
+    .quick-links a {
+      display: inline-block;
+      padding: 10px 14px;
+      border-radius: 999px;
+      border: 1px solid var(--line);
+      background: #fff;
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: 700;
+    }
+
+    a {
+      color: var(--accent);
+    }
+
+    @media (max-width: 640px) {
+      main {
+        width: min(860px, calc(100vw - 20px));
+        margin: 16px auto;
+        padding: 20px;
+        border-radius: 18px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <header class="page-header">
+      <a class="brand-pill" href="../" aria-label="Calcrow home">
+        <img class="brand-icon" src="../icons/Icon-192.png" alt="">
+        <span class="brand-name">Calcrow</span>
+      </a>
+      <a class="language-switch" href="../de/support/index.html" lang="de" hreflang="de" aria-label="Diese Seite auf Deutsch anzeigen">
+        <span class="language-flag" aria-hidden="true">🇩🇪</span>
+        <span class="language-copy"><span class="language-label">Switch language</span><span class="language-name">Deutsch</span></span>
+        <span class="language-arrow" aria-hidden="true">⇄</span>
+      </a>
+    </header>
+    <h1>Support</h1>
+    <p class="meta">Last updated: March 13, 2026</p>
+
+    <p class="notice">
+      Need help with Calcrow? Use the contact details below and include as much context as you can,
+      such as your device, Android version, and what happened before the issue started.
+    </p>
+
+    <section class="support-card">
+      <h2>Contact support</h2>
+      <p>
+        Email support for help with installation, sign-in, file import or export, syncing, purchases,
+        and bug reports.
+      </p>
+      <div class="contact-actions">
+        <a class="contact-link" href="mailto:support@trainvent.com?subject=Calcrow%20Support">
+          Email support
+        </a>
+        <a class="contact-link secondary external-link" href="https://next.trainvent.com/en/software-support/" target="_blank" rel="noopener noreferrer">
+          Open official support form
+        </a>
+      </div>
+      <p>
+        Support email: <a href="mailto:support@trainvent.com">support@trainvent.com</a><br>
+        Company website:
+        <a href="https://trainvent.com/" rel="noopener noreferrer">trainvent.com</a>
+      </p>
+    </section>
+
+    <h2>Helpful details to include</h2>
+    <ul>
+      <li>Your device model and Android version.</li>
+      <li>Your Calcrow app version.</li>
+      <li>Whether the issue happened with CSV, XLSX, or another file type.</li>
+      <li>The exact error message, if one was shown.</li>
+      <li>Steps we can follow to reproduce the issue.</li>
+    </ul>
+
+    <h2>Account and policy links</h2>
+    <p>
+      For privacy and account management topics, use the pages below.
+    </p>
+    <div class="quick-links">
+      <a href="../privacy-policy/index.html">Privacy Policy</a>
+      <a href="../delete-account/index.html">Delete Account</a>
+    </div>
+
+    <h2>What Calcrow helps with</h2>
+    <p>
+      Calcrow is designed for opening, editing, previewing, and exporting spreadsheet-style work log files,
+      including CSV and XLSX workflows.
+    </p>
+  </main>
+  <footer data-calcrow-footer></footer>
+</body>
+</html>
