@@ -27,29 +27,34 @@
     <p class="meta">Zuletzt aktualisiert: 1. November 2026</p>
 
     <p class="notice">
-      Mit diesem Formular kannst du ein Calcrow-Konto mit E-Mail-/Passwort-Anmeldung dauerhaft löschen.
+      Lösche ein Calcrow-Konto mit E-Mail-/Passwort-, Google- oder Apple-Anmeldung.
       Die Löschung erfolgt sofort und kann nicht rückgängig gemacht werden.
     </p>
 
     <section class="delete-panel">
-      <h2>Konto jetzt löschen</h2>
-      <p>Gib E-Mail-Adresse und Passwort des Kontos ein. Calcrow meldet sich an, entfernt deine Kontodaten und löscht das Konto dauerhaft.</p>
-
-      <form id="delete-form" class="form-grid">
-        <div>
-          <label for="email">E-Mail-Adresse</label>
-          <input id="email" name="email" type="email" autocomplete="email" required>
+      <h2>Konto bestätigen</h2>
+      <p>Melde dich mit der Methode an, die du für Calcrow verwendest. Die Anmeldung löscht noch nichts. Überprüfe das angezeigte Konto, bevor du die dauerhafte Löschung bestätigst.</p>
+      <div id="deletion-login">
+        <div class="account-provider-buttons">
+          <button id="google-delete-signin" type="button" disabled>Mit Google fortfahren</button>
+          <button id="apple-delete-signin" type="button" disabled>Mit Apple fortfahren</button>
         </div>
-        <div>
-          <label for="password">Passwort</label>
-          <input id="password" name="password" type="password" autocomplete="current-password" required>
-        </div>
-        <button id="delete-button" class="danger-button" type="submit">Konto dauerhaft löschen</button>
-      </form>
-
-      <p class="helper">Diese selbstständige Löschung funktioniert für Konten mit E-Mail- und Passwort-Anmeldung.</p>
-      <p class="helper">Wenn du dich mit Google oder Apple angemeldet und kein Calcrow-Passwort festgelegt hast, kannst du die Kontolöschung unter <a href="mailto:support@trainvent.com?subject=Calcrow%20Kontol%C3%B6schung">support@trainvent.com</a> anfragen. Gib die E-Mail-Adresse deines Calcrow-Kontos an. Wir können einen Nachweis verlangen, dass dir das Konto gehört. Sende niemals Passwörter, Zugriffstokens oder Autorisierungscodes.</p>
-      <div id="status" class="status" aria-live="polite"></div>
+        <p>Oder melde dich mit deiner Calcrow-E-Mail-Adresse und deinem Passwort an:</p>
+        <form id="delete-form" class="form-grid">
+          <div><label for="email">E-Mail-Adresse</label><input id="email" name="email" type="email" autocomplete="email" required></div>
+          <div><label for="password">Passwort</label><input id="password" name="password" type="password" autocomplete="current-password" required></div>
+          <button id="delete-button" type="submit" disabled>Mit E-Mail fortfahren</button>
+        </form>
+        <p class="helper">Auf dem iPhone kannst du dein Konto auch direkt in Calcrow unter Einstellungen → Konto löschen entfernen, einschließlich Konten mit Apple-Anmeldung.</p>
+      </div>
+      <div id="deletion-confirmation" hidden>
+        <p>Dauerhaft zu löschendes Konto: <strong id="deletion-account-email"></strong></p>
+        <p>Dein Calcrow-Profil und gespeicherte Einstellungen werden gelöscht. Deine Dokumente und App-Store-Abonnements werden nicht gelöscht oder gekündigt.</p>
+        <button id="confirm-delete-button" class="danger-button" type="button" disabled>Konto dauerhaft löschen</button>
+        <button id="change-delete-account" type="button" disabled>Abbrechen / anderes Konto verwenden</button>
+      </div>
+      <div id="status" class="status" role="status" aria-live="polite"></div>
+      <p class="helper">Falls du dich nicht anmelden kannst, wende dich an <a href="mailto:support@trainvent.com?subject=Calcrow%20Kontol%C3%B6schung">support@trainvent.com</a>. Sende niemals Passwörter, Zugriffstokens oder Autorisierungscodes.</p>
     </section>
 
     <h2>Was gelöscht wird</h2>
@@ -73,91 +78,14 @@
     <p>In der <a href="../privacy-policy/index.html">Calcrow-Datenschutzerklärung</a> erfährst du mehr über den Umgang mit Konto- und Dateidaten.</p>
   </main>
 
+  <dialog id="deletion-notice" aria-labelledby="deletion-notice-title">
+    <h2 id="deletion-notice-title">Konto gelöscht</h2>
+    <p id="deletion-notice-message"></p>
+    <button id="deletion-notice-close" class="danger-button" type="button">OK</button>
+  </dialog>
+
   <footer data-calcrow-footer></footer>
 
-  <script type="module">
-    import { initializeApp } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-app.js";
-    import { deleteUser, getAuth, signInWithEmailAndPassword, signOut } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-auth.js";
-    import { deleteDoc, doc, getFirestore } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-firestore.js";
-
-    const firebaseConfig = {
-      apiKey: "AIzaSyBgEt95MLLxnL1lE18gfc9k8Y9MLxm2Ouw",
-      appId: "1:743453990456:web:aff40891efc181165f90cd",
-      messagingSenderId: "743453990456",
-      projectId: "calcrow-prod",
-      authDomain: "calcrow-prod.firebaseapp.com",
-      storageBucket: "calcrow-prod.firebasestorage.app",
-      measurementId: "G-XL02B747JS",
-    };
-
-    const app = initializeApp(firebaseConfig);
-    const auth = getAuth(app);
-    const db = getFirestore(app);
-    const form = document.getElementById("delete-form");
-    const button = document.getElementById("delete-button");
-    const status = document.getElementById("status");
-
-    function setStatus(message, tone) {
-      status.textContent = message;
-      status.dataset.tone = tone;
-    }
-
-    function clearStatus() {
-      status.textContent = "";
-      delete status.dataset.tone;
-    }
-
-    function mapError(error) {
-      switch (error?.code) {
-        case "auth/invalid-credential":
-        case "auth/wrong-password":
-        case "auth/user-not-found":
-        case "auth/invalid-email":
-          return "Die E-Mail-Adresse oder das Passwort wurde nicht akzeptiert.";
-        case "auth/too-many-requests":
-          return "Zu viele Versuche. Bitte versuche es später erneut.";
-        case "auth/network-request-failed":
-          return "Netzwerkfehler beim Kontakt mit Firebase.";
-        default:
-          return error?.message || "Das Konto konnte nicht gelöscht werden.";
-      }
-    }
-
-    async function deleteAccountDoc(path, uid) {
-      // Stop before deleting the login if account-data cleanup fails.
-      await deleteDoc(doc(db, path, uid));
-    }
-
-    form.addEventListener("submit", async (event) => {
-      event.preventDefault();
-      clearStatus();
-      button.disabled = true;
-      const email = form.email.value.trim();
-      const password = form.password.value;
-
-      try {
-        const credential = await signInWithEmailAndPassword(auth, email, password);
-        const user = credential.user;
-        await Promise.all([
-          deleteAccountDoc("users", user.uid),
-          deleteAccountDoc("email_verification_codes", user.uid),
-          deleteAccountDoc("verificationCodes", user.uid),
-        ]);
-        await deleteUser(user);
-        setStatus("Dein Calcrow-Konto wurde dauerhaft gelöscht.", "success");
-        form.reset();
-      } catch (error) {
-        console.error(error);
-        setStatus(mapError(error), "error");
-        try {
-          await signOut(auth);
-        } catch (_) {
-          // Fehler beim Abmelden nach einem fehlgeschlagenen Löschversuch ignorieren.
-        }
-      } finally {
-        button.disabled = false;
-      }
-    });
-  </script>
+  <script type="module" src="../../account-deletion.js"></script>
 </body>
 </html>

@@ -232,6 +232,21 @@ input:focus { outline: 2px solid rgba(187, 90, 60, 0.2); border-color: var(--acc
   font-weight: 600;
 }
 
+.account-provider-buttons { display: flex; flex-wrap: wrap; gap: 12px; }
+.account-provider-buttons button { flex: 1 1 180px; }
+.delete-panel button:not(.danger-button) {
+  min-height: 48px;
+  padding: 12px 18px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: var(--panel);
+  color: var(--ink);
+  font: inherit;
+  cursor: pointer;
+}
+.delete-panel button:disabled { opacity: 0.6; cursor: wait; }
+.delete-panel [hidden] { display: none; }
+
 @media (max-width: 640px) {
   main { width: min(860px, calc(100vw - 20px)); margin: 16px auto; padding: 20px; border-radius: 18px; }
   .page-header { gap: 10px; margin-bottom: 24px; }
@@ -240,3 +255,17 @@ input:focus { outline: 2px solid rgba(187, 90, 60, 0.2); border-color: var(--acc
   .language-name { margin-top: 0; }
   .site-footer { width: calc(100vw - 20px); margin-top: 0; padding-inline: 8px; }
 }
+
+#deletion-notice {
+  max-width: min(520px, calc(100vw - 32px));
+  max-height: calc(100dvh - 48px);
+  overflow: auto;
+  padding: 24px;
+  border: 1px solid var(--line);
+  border-radius: 22px;
+  background: var(--panel);
+  color: var(--ink);
+  font: inherit;
+}
+#deletion-notice::backdrop { background: rgba(31, 26, 23, 0.55); }
+#deletion-notice h2 { margin-top: 0; }
