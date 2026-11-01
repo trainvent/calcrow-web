@@ -1,65 +1,105 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="marketing-mode">
 <head>
-  <!--
-    If you are serving your web app in a path other than the root, change the
-    href value below to reflect the base path you are serving from.
-
-    The path provided below has to start and end with a slash "/" in order for
-    it to work correctly.
-
-    For more details:
-    * https://developer.mozilla.org/en-US/docs/Web/HTML/Element/base
-
-    This is a placeholder for base href that will be replaced by the value of
-    the `--base-href` argument provided to `flutter build`.
-  -->
   <base href="/">
-
   <meta charset="UTF-8">
-  <meta content="IE=Edge" http-equiv="X-UA-Compatible">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Open, edit, preview, and export spreadsheet files with Calcrow.">
-
-  <!-- iOS meta tags & icons -->
   <meta name="mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   <meta name="apple-mobile-web-app-title" content="Calcrow">
   <link rel="apple-touch-icon" href="icons/Icon-192.png">
-
-  <!-- Favicon -->
-  <link rel="icon" type="image/png" href="favicon.png"/>
-
-  <title>Calcrow</title>
+  <link rel="icon" type="image/png" href="favicon.png">
   <link id="app-manifest" rel="manifest" href="manifest.json">
-  <script>
-    if ((navigator.language || "").toLowerCase().startsWith("de")) {
-      document.documentElement.lang = "de";
-      document.querySelector('meta[name="description"]').content =
-        "Tabellendateien mit Calcrow öffnen, bearbeiten, ansehen und exportieren.";
-      document.getElementById("app-manifest").href = "manifest-de.json";
-    }
-  </script>
+  <title>Calcrow</title>
+  <script src="homepage-entry.js"></script>
+  <link rel="stylesheet" href="static-pages.css">
+  <link rel="stylesheet" href="homepage.css">
+  <script src="static-pages.js" defer></script>
 </head>
 <body>
-  <main id="calcrow-introduction" lang="en" style="max-width:720px;margin:48px auto;padding:32px;font:16px/1.6 system-ui,sans-serif;color:#1f1a17;background:#f5f1e8;border-radius:24px;">
-    <img src="icons/Icon-192.png" width="64" height="64" alt="">
-    <h1>Calcrow</h1>
-    <p>Open, edit, preview, and save spreadsheet-style work logs on iOS, Android, and the web. Calcrow supports CSV, XLSX, and ODS documents.</p>
-    <p>Google Drive is optional. When you connect it, Calcrow accesses only files you explicitly select or create with the app.</p>
-    <p>
-      <a href="privacy-policy/index.html">Privacy Policy</a> ·
-      <a href="terms-of-use/index.html">Terms of Use</a> ·
-      <a href="support/index.html">Support</a>
-    </p>
-    <p>Provided by Trainvent. <a href="mailto:support@trainvent.com">Contact support</a>.</p>
-    <noscript><p>JavaScript is required to launch the editor. The policy and support pages above remain available without it.</p></noscript>
+  <main class="landing-page marketing-only">
+    <section class="hero" aria-labelledby="hero-title">
+      <header class="hero-header">
+        <div class="hero-pills">
+          <a class="brand-pill" href="./" aria-label="Calcrow">
+            <img src="icons/Icon-192.png" width="16" height="16" alt="" loading="lazy">
+            <span>Calcrow</span>
+          </a>
+          <span class="editor-pill"><span lang="en">sheet editor</span><span lang="de">Tabellen-Editor</span></span>
+        </div>
+        <a class="web-app-button" href="?app=1">Web-App <span aria-hidden="true">↗</span></a>
+      </header>
+      <div class="hero-copy">
+        <h1 id="hero-title"><span lang="en">Sheet manipulation on the go.</span><span lang="de">Tabellen unterwegs bearbeiten.</span></h1>
+        <p class="hero-description"><span lang="en">Open CSV, XLSX, or ODS files, edit the focused row in core editor, and save back to local or cloud storage.</span><span lang="de">Öffne CSV-, XLSX- oder ODS-Dateien, bearbeite die fokussierte Zeile im Editor und speichere sie lokal oder in der Cloud.</span></p>
+        <div class="store-badges">
+          <a href="https://play.google.com/store/apps/details?id=de.lemarq.calcrow" target="_blank" rel="noopener noreferrer">
+            <img lang="en" src="public/store-badges/google-play-en.svg" height="56" alt="Get it on Google Play" loading="lazy">
+            <img lang="de" src="public/store-badges/google-play-de.svg" height="56" alt="Jetzt bei Google Play" loading="lazy">
+          </a>
+          <a href="https://apps.apple.com/us/app/calcrow/id6760388420" target="_blank" rel="noopener noreferrer">
+            <img lang="en" src="public/store-badges/app-store-en.svg" height="56" alt="Download on the App Store" loading="lazy">
+            <img lang="de" src="public/store-badges/app-store-de.svg" height="56" alt="Laden im App Store" loading="lazy">
+          </a>
+        </div>
+        <ul class="capabilities">
+          <li><span class="capability-icon" aria-hidden="true">▤</span><span lang="en">Open CSV, XLSX, or ODS.</span><span lang="de">CSV, XLSX oder ODS öffnen.</span></li>
+          <li><span class="capability-icon" aria-hidden="true">⊙</span><span lang="en">Focused row editing</span><span lang="de">Fokussierte Zeilenbearbeitung</span></li>
+          <li><span class="capability-icon" aria-hidden="true">☁</span><span lang="en">Local · Google Drive · WebDAV</span><span lang="de">Lokal · Google Drive · WebDAV</span></li>
+        </ul>
+      </div>
+      <div class="hero-showcase">
+        <img src="public/showcases/showcase_pro.png" width="2560" height="2165" alt="Calcrow" loading="lazy">
+      </div>
+    </section>
+
+    <section class="preview-panel" aria-labelledby="preview-title">
+      <h2 id="preview-title"><span lang="en">Desktop to mobile, optimized to fit.</span><span lang="de">Vom Desktop bis zum Smartphone optimal angepasst.</span></h2>
+      <p class="preview-subtitle"><span lang="en">Focused row editing</span><span lang="de">Fokussierte Zeilenbearbeitung</span></p>
+      <div class="preview-columns">
+        <div class="desktop-preview">
+          <table class="sheet-example" aria-label="Example work log">
+            <thead><tr><th scope="col">Date</th><th scope="col">Project</th><th scope="col">Start</th><th scope="col">End</th><th scope="col">Total</th></tr></thead>
+            <tbody>
+              <tr><td>12/05</td><td>Client B</td><td>07:45</td><td>15:30</td><td>07:45</td></tr>
+              <tr class="focused-row"><td>13/05</td><td>Client A</td><td>08:00</td><td>16:00</td><td>08:00</td></tr>
+              <tr><td>14/05</td><td>Client C</td><td>09:00</td><td>17:00</td><td>08:00</td></tr>
+            </tbody>
+          </table>
+          <p class="preview-note"><span lang="en">Focused row is highlighted</span><span lang="de">Die fokussierte Zeile ist hervorgehoben</span></p>
+        </div>
+        <div class="mobile-preview">
+          <h3><span lang="en">Mobile two-column view</span><span lang="de">Mobile Zweispaltenansicht</span></h3>
+          <dl class="mobile-example">
+            <dt>Date</dt><dd>13/05</dd>
+            <dt>Project</dt><dd>Client A</dd>
+            <dt>Start</dt><dd>08:00</dd>
+            <dt>End</dt><dd>16:00</dd>
+            <dt>Total</dt><dd>08:00</dd>
+          </dl>
+          <p class="preview-note"><span lang="en">Same row, compacted for mobile screens</span><span lang="de">Dieselbe Zeile, kompakt für mobile Bildschirme</span></p>
+        </div>
+      </div>
+      <p class="example-note"><span lang="en">Note: this sheet is just an example</span><span lang="de">Hinweis: Diese Tabelle ist nur ein Beispiel</span></p>
+    </section>
+    <noscript><p class="drive-notice">JavaScript is required to use the web app. Policy and support pages remain available without it.</p></noscript>
+    <p class="drive-notice"><span lang="en">Google Drive is optional. Calcrow accesses only files you explicitly select or create with the app.</span><span lang="de">Google Drive ist optional. Calcrow greift nur auf Dateien zu, die du ausdrücklich auswählst oder mit der App erstellst.</span></p>
   </main>
-  <script>
-    window.addEventListener('flutter-first-frame', () => {
-      document.getElementById('calcrow-introduction')?.remove();
-    }, {once: true});
-  </script>
-  <script src="google_drive_picker.js"></script>
-  <script src="flutter_bootstrap.js" async></script>
+  <footer class="site-footer marketing-only" data-calcrow-footer>
+    <nav class="footer-links" aria-label="Footer navigation">
+      <a href="privacy-policy/index.html">Privacy Policy</a>
+      <a href="terms-of-use/index.html">Terms</a>
+      <a href="privacy-policy-ads/index.html">Ads Privacy</a>
+      <a href="support/index.html">Support</a>
+      <a href="delete-account/index.html">Delete Account</a>
+    </nav>
+    <p class="footer-attribution">Calcrow is delivered by <a href="https://next.trainvent.com/">Trainvent</a>.</p>
+  </footer>
+  <div id="app-loading" class="app-loading app-only" role="status" aria-live="polite">
+    <img src="icons/Icon-192.png" width="64" height="64" alt="">
+    <p id="app-loading-message"><span lang="en">Loading Calcrow…</span><span lang="de">Calcrow wird geladen…</span></p>
+    <button id="app-retry" type="button" hidden><span lang="en">Try again</span><span lang="de">Erneut versuchen</span></button>
+  </div>
 </body>
 </html>

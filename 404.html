@@ -11,7 +11,11 @@
       var hash = window.location.hash || "";
 
       if (path === "/app" || path === "/app/") {
-        window.location.replace("/?app=1" + search + hash);
+        var target = new URL("/", window.location.origin);
+        target.search = search;
+        target.searchParams.set("app", "1");
+        target.hash = hash;
+        window.location.replace(target.href);
         return;
       }
 
