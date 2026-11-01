@@ -224,7 +224,7 @@
       </a>
     </header>
     <h1>Delete Your Account</h1>
-    <p class="meta">Last updated: March 12, 2026</p>
+    <p class="meta">Last updated: November 1, 2026</p>
 
     <p class="notice">
       Use the form below to permanently delete an email/password Calcrow account.
@@ -262,6 +262,12 @@
 
       <p class="helper">
         This self-service deletion works for accounts that use email and password sign-in.
+      </p>
+      <p class="helper">
+        If you signed in with Google or Apple without setting a Calcrow password,
+        request account deletion at <a href="mailto:support@trainvent.com?subject=Calcrow%20account%20deletion">support@trainvent.com</a>.
+        Include your Calcrow account email. We may ask you to verify account ownership;
+        never send passwords, access tokens, or authorization codes.
       </p>
       <div id="status" class="status" aria-live="polite"></div>
     </section>
@@ -352,12 +358,9 @@
       }
     }
 
-    async function tryDeleteDoc(path, uid) {
-      try {
-        await deleteDoc(doc(db, path, uid));
-      } catch (error) {
-        console.warn(`Could not delete ${path}/${uid}`, error);
-      }
+    async function deleteAccountDoc(path, uid) {
+      // Stop before deleting the login if account-data cleanup fails.
+      await deleteDoc(doc(db, path, uid));
     }
 
     form.addEventListener("submit", async (event) => {
@@ -373,9 +376,9 @@
         const user = credential.user;
 
         await Promise.all([
-          tryDeleteDoc("users", user.uid),
-          tryDeleteDoc("email_verification_codes", user.uid),
-          tryDeleteDoc("verificationCodes", user.uid),
+          deleteAccountDoc("users", user.uid),
+          deleteAccountDoc("email_verification_codes", user.uid),
+          deleteAccountDoc("verificationCodes", user.uid),
         ]);
 
         await deleteUser(user);

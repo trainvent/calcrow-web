@@ -135,7 +135,7 @@
       </a>
     </header>
     <h1>Privacy Policy</h1>
-    <p class="meta">Effective date: March 12, 2026</p>
+    <p class="meta">Last updated: November 1, 2026</p>
 
     <p class="notice">
       Calcrow is built to help you open, edit, and save spreadsheet-style work log files.
@@ -146,6 +146,10 @@
     <p>
       Calcrow lets you open CSV, XLSX, and similar files, edit daily entries, preview sheet data,
       and save or export updated files.
+    </p>
+    <p>
+      Calcrow is provided by Trainvent. For privacy questions or requests about
+      your account data, contact <a href="mailto:support@trainvent.com">support@trainvent.com</a>.
     </p>
 
     <h2>Data you provide</h2>
@@ -163,6 +167,49 @@
       <li>If you use cloud or sync features, the files and related metadata may be transmitted to the selected service.</li>
       <li>If you download or export an updated file on the web, the file is saved through your browser's download flow.</li>
     </ul>
+
+    <h2>Google account information</h2>
+    <p>
+      If you sign in with Google, Google provides basic account information such
+      as your account identifier, email address, and, where available, your name
+      and profile picture. Firebase Authentication uses this information to
+      authenticate and manage your Calcrow account. Connecting Google Drive is
+      a separate action; signing in alone does not grant access to Drive files.
+    </p>
+
+    <h2>Google Drive files</h2>
+    <p>
+      When you connect Google Drive, Calcrow requests access only to files you
+      select through Google's file picker or create with Calcrow. It uses those
+      files and their metadata to open, edit, preview, and save your documents.
+      Selecting a folder does not grant access to every existing file inside it.
+      You can disconnect Google Drive in Settings or revoke Calcrow's access in
+      your <a href="https://myaccount.google.com/connections">Google Account connections</a>.
+    </p>
+    <p>
+      Calcrow reads selected files, their names, identifiers, types, and modification
+      times to open documents and keep your selected sync file up to date. When
+      you save, Calcrow writes your changes to the selected Drive document or
+      selected Google Sheets tab. It does not need access to your entire Drive.
+    </p>
+    <p>
+      Document contents are processed in the app and may be cached on your device
+      or in your browser to restore your open document. Firebase stores account
+      settings, including the linked Drive email, selected file identifiers and
+      names, recent opening configurations, type hints, and saved presets you
+      create. Presets can include field values you choose to save. Drive access
+      tokens are used by the client to call Google APIs; they are not stored in
+      these Firebase document settings. Google's sign-in SDK manages Google
+      session credentials on your device or in your browser.
+    </p>
+    <p>
+      Google user data is used to provide the account and document features you
+      choose. We do not sell it, use Drive file contents for advertising, or use
+      them to train generalized artificial-intelligence models. Calcrow's use
+      and transfer of information received from Google APIs follows the
+      <a href="https://developers.google.com/terms/api-services-user-data-policy">Google API Services User Data Policy</a>,
+      including its Limited Use requirements.
+    </p>
 
     <h2>Third-party services</h2>
     <p>Depending on which features you use, Calcrow may rely on third-party services such as:</p>
@@ -191,8 +238,20 @@
 
     <h2>Data retention</h2>
     <p>
-      Local files remain under your control unless you upload, sync, or export them through another
-      service. Remote retention, if any, depends on the third-party services you choose to use.
+      Your original files and exported copies remain under your control on your
+      device or with your selected storage provider. Disconnecting Drive or
+      deleting your Calcrow account does not delete those files. You can remove
+      locally cached document data by clearing the app's or browser's stored data.
+    </p>
+    <p>
+      Account settings and saved document metadata remain in Firebase while
+      needed for your account, until removed or your account data is deleted.
+      Disconnecting Drive clears the active link and selected sync-file reference;
+      other saved opening configurations and presets may remain in your account.
+      Use the <a href="../delete-account/index.html">account deletion page</a>
+      or contact <a href="mailto:support@trainvent.com">support@trainvent.com</a>
+      to request deletion. Retention of provider-managed backups, diagnostics,
+      and purchase records depends on those services and applicable requirements.
     </p>
 
     <h2>Your choices</h2>

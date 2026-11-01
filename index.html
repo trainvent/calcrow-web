@@ -19,9 +19,6 @@
   <meta charset="UTF-8">
   <meta content="IE=Edge" http-equiv="X-UA-Compatible">
   <meta name="description" content="Open, edit, preview, and export spreadsheet files with Calcrow.">
-  <meta
-    name="google-signin-client_id"
-    content="743453990456-2vvj52vvip66sd3gpp8h9gd16ljt1vlm.apps.googleusercontent.com">
 
   <!-- iOS meta tags & icons -->
   <meta name="mobile-web-app-capable" content="yes">
@@ -44,6 +41,25 @@
   </script>
 </head>
 <body>
+  <main id="calcrow-introduction" lang="en" style="max-width:720px;margin:48px auto;padding:32px;font:16px/1.6 system-ui,sans-serif;color:#1f1a17;background:#f5f1e8;border-radius:24px;">
+    <img src="icons/Icon-192.png" width="64" height="64" alt="">
+    <h1>Calcrow</h1>
+    <p>Open, edit, preview, and save spreadsheet-style work logs on iOS, Android, and the web. Calcrow supports CSV, XLSX, and ODS documents.</p>
+    <p>Google Drive is optional. When you connect it, Calcrow accesses only files you explicitly select or create with the app.</p>
+    <p>
+      <a href="privacy-policy/index.html">Privacy Policy</a> ·
+      <a href="terms-of-use/index.html">Terms of Use</a> ·
+      <a href="support/index.html">Support</a>
+    </p>
+    <p>Provided by Trainvent. <a href="mailto:support@trainvent.com">Contact support</a>.</p>
+    <noscript><p>JavaScript is required to launch the editor. The policy and support pages above remain available without it.</p></noscript>
+  </main>
+  <script>
+    window.addEventListener('flutter-first-frame', () => {
+      document.getElementById('calcrow-introduction')?.remove();
+    }, {once: true});
+  </script>
+  <script src="google_drive_picker.js"></script>
   <script src="flutter_bootstrap.js" async></script>
 </body>
 </html>
