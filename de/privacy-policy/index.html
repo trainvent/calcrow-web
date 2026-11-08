@@ -24,7 +24,7 @@
       </a>
     </header>
     <h1>Datenschutzerklärung</h1>
-    <p class="meta">Zuletzt aktualisiert: 1. November 2026</p>
+    <p class="meta">Zuletzt aktualisiert: 8. November 2026</p>
 
     <p class="notice">
       Calcrow hilft dir, tabellenartige Arbeitsprotokolle zu öffnen, zu bearbeiten und zu speichern.
@@ -39,7 +39,7 @@
     <ul>
       <li>Tabellendateien, die du in der App öffnest.</li>
       <li>Inhalte dieser Dateien, etwa Daten, Arbeitszeiten, Notizen oder benutzerdefinierte Felder.</li>
-      <li>Kontodaten, wenn du dich über einen unterstützten Anbieter anmeldest.</li>
+      <li>Kontodaten, wenn du dich über einen unterstützten Anbieter (Apple oder Google) anmeldest oder dich mit E-Mail-Adresse und Passwort registrierst.</li>
       <li>Informationen zum Kaufstatus, wenn du kostenpflichtige Funktionen oder Abonnements nutzt.</li>
     </ul>
 
@@ -54,6 +54,12 @@
     <h2>Google-Kontoinformationen</h2>
     <p>Wenn du dich mit Google anmeldest, stellt Google grundlegende Kontoinformationen bereit, etwa deine Kontokennung, E-Mail-Adresse und, soweit vorhanden, deinen Namen und dein Profilbild. Firebase Authentication verwendet diese Informationen zur Authentifizierung und Verwaltung deines Calcrow-Kontos. Die Verbindung mit Google Drive ist ein separater Schritt; die Anmeldung allein gewährt keinen Zugriff auf Drive-Dateien.</p>
 
+    <h2>Apple-Kontoinformationen</h2>
+    <p>Wenn du dich mit Apple anmeldest, stellt Apple eine Kontokennung, eine E-Mail-Adresse und – nur bei der ersten Anmeldung – den Namen bereit, den du teilen möchtest. Wenn du „E-Mail-Adresse verbergen“ wählst, erhalten wir von Apple eine private Weiterleitungsadresse, die an dein Postfach weiterleitet; Calcrow erhält deine echte Adresse nicht. Firebase Authentication verwendet diese Informationen zur Authentifizierung und Verwaltung deines Calcrow-Kontos. Wenn du dein Konto löschst, versucht Calcrow, die Autorisierung für „Mit Apple anmelden“ zu widerrufen; du kannst die Verwendung von „Mit Apple anmelden“ für Calcrow außerdem jederzeit in deinen Apple-Account-Einstellungen beenden.</p>
+
+    <h2>Anmeldung per E-Mail</h2>
+    <p>Wenn du dich mit E-Mail-Adresse und Passwort registrierst, speichert Firebase Authentication deine E-Mail-Adresse und verwaltet dein Passwort sicher; Calcrow sieht dein Passwort nicht. Zur Bestätigung deiner Adresse oder zum Zurücksetzen deines Passworts sendet Calcrow über unseren E-Mail-Anbieter einen Einmalcode von no-reply@trainvent.com.</p>
+
     <h2>Dateien in Google Drive</h2>
     <p>Wenn du Google Drive verbindest, fordert Calcrow nur Zugriff auf Dateien an, die du über die Google-Dateiauswahl auswählst oder mit Calcrow erstellst. Diese Dateien und ihre Metadaten werden zum Öffnen, Bearbeiten, Anzeigen und Speichern deiner Dokumente verwendet. Die Auswahl eines Ordners gibt nicht alle darin vorhandenen Dateien frei. Du kannst Google Drive in den Einstellungen trennen oder Calcrows Zugriff in den <a href="https://myaccount.google.com/connections">Verbindungen deines Google-Kontos</a> widerrufen.</p>
     <p>Calcrow liest ausgewählte Dateien sowie deren Namen, Kennungen, Dateitypen und Änderungszeiten, um Dokumente zu öffnen und deine ausgewählte Synchronisierungsdatei aktuell zu halten. Beim Speichern schreibt Calcrow deine Änderungen in das ausgewählte Drive-Dokument oder Tabellenblatt in Google Sheets. Zugriff auf dein gesamtes Drive ist dafür nicht erforderlich.</p>
@@ -67,13 +73,16 @@
       <li>Firebase Analytics, wenn du Nutzungsanalysen in den Einstellungen ausdrücklich aktivierst.</li>
       <li>Firebase Crashlytics und Firebase Performance Monitoring, wenn du Absturz- und Leistungsdiagnosen in den Einstellungen ausdrücklich aktivierst.</li>
       <li>Google-Anmeldung oder Google Drive, wenn du ein Google-Konto verbindest.</li>
-      <li>RevenueCat und den jeweiligen App-Store für Abonnements oder die Kaufprüfung.</li>
+      <li>„Mit Apple anmelden“, wenn du dich mit deinem Apple Account anmeldest.</li>
+      <li>Einen E-Mail-Versanddienst für Bestätigungs- und Passwort-Zurücksetzungscodes.</li>
+      <li>RevenueCat und den jeweiligen App-Store für Abonnements oder die Kaufprüfung. Calcrow deaktiviert die automatische Erfassung von Werbe-Gerätekennungen durch RevenueCat.</li>
+      <li>Google AdMob in der kostenlosen mobilen Version, wenn du dich für „Mit Werbung fortfahren“ entscheidest.</li>
     </ul>
     <p>Diese Dienste unterliegen eigenen Datenschutzerklärungen und können Kontokennungen, Geräteinformationen oder Transaktionsdaten verarbeiten, soweit dies für ihren Dienst erforderlich ist.</p>
     <p>Falls Calcrow in unterstützten mobilen Versionen Google AdMob verwendet, findest du Informationen zu Werbeeinwilligungen und regionalen Datenschutzoptionen in der <a href="../privacy-policy-ads/index.html">Datenschutzerklärung für Werbung</a>.</p>
 
     <h2>Weitergabe von Daten</h2>
-    <p>Calcrow verkauft deine personenbezogenen Daten nicht. Daten werden nur weitergegeben, wenn dies für aktiv genutzte Funktionen erforderlich ist, etwa Anmeldung, Cloud-Synchronisierung, Dateizugriff, Kaufprüfung oder ausdrücklich aktivierte Nutzungs-, Absturz- und Leistungsanalysen.</p>
+    <p>Calcrow verkauft deine personenbezogenen Daten nicht. Daten werden nur weitergegeben, wenn dies für aktiv genutzte Funktionen erforderlich ist, etwa Anmeldung, Cloud-Synchronisierung, Dateizugriff, Kaufprüfung oder ausdrücklich aktivierte Nutzungs-, Absturz- und Leistungsanalysen. Wenn du in der kostenlosen mobilen Version mit Werbung fortfährst, verarbeitet Google AdMob werbebezogene Daten wie in der <a href="../privacy-policy-ads/index.html">Datenschutzerklärung für Werbung</a> beschrieben. Daten aus Nutzungsanalysen werden niemals für Werbezwecke weitergegeben.</p>
 
     <h2>Speicherdauer</h2>
     <p>Originaldateien und exportierte Kopien bleiben auf deinem Gerät oder bei deinem gewählten Speicheranbieter unter deiner Kontrolle. Das Trennen von Drive oder das Löschen deines Calcrow-Kontos löscht diese Dateien nicht. Lokal zwischengespeicherte Dokumentdaten kannst du durch das Löschen der gespeicherten App- oder Browserdaten entfernen.</p>

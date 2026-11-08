@@ -135,7 +135,7 @@
       </a>
     </header>
     <h1>Privacy Policy</h1>
-    <p class="meta">Last updated: November 1, 2026</p>
+    <p class="meta">Last updated: November 8, 2026</p>
 
     <p class="notice">
       Calcrow is built to help you open, edit, and save spreadsheet-style work log files.
@@ -156,7 +156,7 @@
     <ul>
       <li>Spreadsheet files you choose to open in the app.</li>
       <li>Information contained in those files, such as dates, work hours, notes, or custom fields.</li>
-      <li>Account details if you choose to sign in with a supported provider.</li>
+      <li>Account details if you choose to sign in with a supported provider (Apple or Google) or register with an email address and password.</li>
       <li>Purchase status information if you use paid features or subscriptions.</li>
     </ul>
 
@@ -175,6 +175,27 @@
       and profile picture. Firebase Authentication uses this information to
       authenticate and manage your Calcrow account. Connecting Google Drive is
       a separate action; signing in alone does not grant access to Drive files.
+    </p>
+
+    <h2>Apple account information</h2>
+    <p>
+      If you sign in with Apple, Apple provides an account identifier, an email
+      address, and, on your first sign-in only, the name you choose to share. If
+      you choose Hide My Email, Apple gives us a private relay address that
+      forwards to your inbox; Calcrow does not receive your real address. Firebase
+      Authentication uses this information to authenticate and manage your
+      Calcrow account. When you delete your account, Calcrow attempts to revoke
+      its Sign in with Apple authorization; you can also stop using Sign in with
+      Apple for Calcrow in your Apple Account settings at any time.
+    </p>
+
+    <h2>Email sign-in</h2>
+    <p>
+      If you register with an email address and password, Firebase Authentication
+      stores your email address and manages your password securely; Calcrow does
+      not see your password. To verify your address or reset your password,
+      Calcrow sends a one-time code by email from no-reply@trainvent.com through
+      our email provider.
     </p>
 
     <h2>Google Drive files</h2>
@@ -218,7 +239,10 @@
       <li>Firebase Analytics if you explicitly enable usage analytics in Settings.</li>
       <li>Firebase Crashlytics and Firebase Performance Monitoring if you explicitly enable crash and performance diagnostics in Settings.</li>
       <li>Google Sign-In or Google Drive integrations if you connect a Google account.</li>
-      <li>RevenueCat and the platform app store for subscriptions or purchase validation.</li>
+      <li>Sign in with Apple if you choose to sign in with your Apple Account.</li>
+      <li>An email delivery provider to send verification and password reset codes.</li>
+      <li>RevenueCat and the platform app store for subscriptions or purchase validation. Calcrow disables RevenueCat's automatic collection of advertising device identifiers.</li>
+      <li>Google AdMob in the free mobile version if you choose to continue with ads.</li>
     </ul>
     <p>
       Those services operate under their own privacy policies and may process account identifiers,
@@ -234,6 +258,9 @@
       Calcrow does not sell your personal data. Data is shared only when needed to provide features
       you actively use, such as sign-in, cloud sync, file access, purchase verification, or optional
       usage analytics or crash and performance diagnostics that you explicitly enable in Settings.
+      If you choose to continue with ads in the free mobile version, Google AdMob processes ad-related
+      data as described in the <a href="../privacy-policy-ads/index.html">Ads Privacy Policy</a>.
+      Usage analytics data is never shared for advertising purposes.
     </p>
 
     <h2>Data retention</h2>
